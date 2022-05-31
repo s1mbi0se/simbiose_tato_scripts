@@ -26,3 +26,32 @@ components.agenda__start_hour.onChange(() => {
 components.agenda__end_hour.onChange(() => {
 		limitEndHour()
 })
+
+try {
+	let cep = components.physiotherapist__zipcode.value
+	fetch(`https://viacep.com.br/ws/${cep}/json/`)
+	.then((response) => {
+		response.json().then(data => {
+			components.physiotherapist__street.value = data.logradouro
+			components.physiotherapist__city.value = data.localidade
+			components.physiotherapist__state.value = data.uf
+		})
+	})
+}
+finally {
+	components.physiotherapist__zipcode.onChange(() => {
+		let cep2 = components.physiotherapist__zipcode.value
+		fetch(`https://viacep.com.br/ws/${cep2}/json/`)
+		.then((response) => {
+			response.json().then(data => {
+				console.log(data)
+				components.physiotherapist__street.value = data.logradouro
+				components.physiotherapist__city.value = data.localidade
+				components.physiotherapist__state.value = data.uf
+			})
+		})
+		.catch(error => {
+			console.log(error)
+		})
+	})
+}
