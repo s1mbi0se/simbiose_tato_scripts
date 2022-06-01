@@ -5,5 +5,6 @@ components.GerarLink.onClick(function(){
     let queryParam = `partner_company__name=${company_name}&partner_company__id=${company_id}`;
     url += `/tatodois-pre-triagem?${queryParam}`;
     document.querySelector("textarea").value = url
+
 })
 

@@ -6,4 +6,5 @@ components.physiotherapist__cpf.onChange(() => {
 components.physiotherapist__first_name.onChange(() => {
 	let physiotherapistName = components.physiotherapist__first_name.value
 	components.organization__name.value = physiotherapistName
+
 })
