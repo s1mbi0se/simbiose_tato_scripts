@@ -1,0 +1,1 @@
+(()=>{"use strict";setTimeout((()=>{executeAction("teste a",null,{identifier:1}),console.log("test imports")}),3e3)})();

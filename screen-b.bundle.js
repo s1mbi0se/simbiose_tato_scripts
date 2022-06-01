@@ -1,0 +1,1 @@
+(()=>{"use strict";function o(o){console.log("parameter received : "+o)}setTimeout((()=>{console.log("test imports"),o("screen-b.js"),console.log("console from commmon 2"),o("aaaaaaa")}),3e3)})();
