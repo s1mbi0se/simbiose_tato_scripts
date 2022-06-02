@@ -12,10 +12,10 @@ function limitEndHour()  {
 	let endHour = parseInt(eH*60)
 	let endTime = parseInt(endHour + endMinute)
 
-	if (endTime < startTime){
+	if (endTime <= startTime){
 		let timeHour = Math.floor(startTime / 60)
 		let timeMinutes = startTime % 60
-		components.agenda__end_hour.value = `${timeHour}:${timeMinutes}`
+		components.agenda__end_hour.value = `${timeHour}:${timeMinutes + 30}`
 	}
 }
 
