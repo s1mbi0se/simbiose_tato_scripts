@@ -1,0 +1,1 @@
+components.GerarLink.onClick((function(){let e=window.location.origin.toString();e+=`/tatotriagem-pre-triagem?partner_company__name=${document.querySelector("input").value.replaceAll(" ","_")}&partner_company__id=${window.location.href.split("/").pop()}`,document.querySelector("textarea").value=e}));/*! Thu Jul 14 2022 19:43:25 GMT+0000 (Coordinated Universal Time) !*/
